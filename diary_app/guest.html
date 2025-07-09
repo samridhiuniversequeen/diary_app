@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Guest Diary</title>
+    <link rel="stylesheet" href="style.css">
+
+</head>
+<body>
+    <div class="container">
+    <h1>My Diary</h1>
+    
+    <h2>Guest Mode</h2>
+    <textarea id="guestEntry" rows="10" cols="50" placeholder="Write your diary here..."></textarea><br>
+    <button onclick="saveEntry()">Save</button>
+    <button onclick="loadEntry()">Load Previous</button>
+
+    <script>
+        function saveEntry() {
+            let content = document.getElementById("guestEntry").value;
+            localStorage.setItem("guest_diary", content);
+            alert("Saved to your browser!");
+        }
+
+        function loadEntry() {
+            let saved = localStorage.getItem("guest_diary");
+            if (saved) {
+                document.getElementById("guestEntry").value = saved;
+            } else {
+                alert("No saved entry found.");
+            }
+        }
+    </script>
+    </div>
+</body>
+</html>

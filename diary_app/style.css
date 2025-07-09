@@ -1,0 +1,116 @@
+/* Base styles */
+body {
+    font-family: Arial, sans-serif;
+    background-color: #f3f3f3;
+    color: #333;
+    margin: 0;
+    padding: 20px;
+    transition: background-color 0.3s, color 0.3s;
+}
+
+.container {
+    max-width: 800px;
+    margin: 0 auto;
+    padding: 10px;
+}
+
+h1, h2, h3 {
+    color: #0077cc;
+}
+
+form {
+    margin-bottom: 20px;
+    padding: 15px;
+    background-color: white;
+    border: 1px solid #ccc;
+    border-radius: 8px;
+    box-shadow: 0 2px 8px rgba(0,0,0,0.05);
+}
+
+textarea,
+input[type="text"],
+input[type="email"],
+input[type="password"],
+input[type="date"] {
+    width: 100%;
+    padding: 12px;
+    margin: 8px 0 16px;
+    border: 1px solid #bbb;
+    border-radius: 6px;
+    font-size: 16px;
+    resize: vertical;
+    box-sizing: border-box;
+}
+
+button {
+    padding: 10px 20px;
+    background-color: #0077cc;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    font-size: 16px;
+    cursor: pointer;
+    margin-bottom: 8px;
+}
+
+button:hover {
+    background-color: #005fa3;
+}
+
+a {
+    color: #0077cc;
+    text-decoration: none;
+}
+
+a:hover {
+    text-decoration: underline;
+}
+
+hr {
+    margin: 20px 0;
+    border-top: 1px solid #ddd;
+}
+
+/* Dark Mode */
+.dark {
+    background-color: #121212;
+    color: #e0e0e0;
+}
+
+.dark form {
+    background-color: #1e1e1e;
+    border-color: #444;
+}
+
+.dark textarea,
+.dark input,
+.dark button {
+    background-color: #2a2a2a;
+    color: #fff;
+    border-color: #555;
+}
+
+.dark a {
+    color: #66ccff;
+}
+
+/* ✅ Responsive layout */
+@media (max-width: 600px) {
+    body {
+        padding: 10px;
+    }
+
+    .container {
+        padding: 0;
+    }
+
+    textarea,
+    input,
+    button {
+        font-size: 16px;
+    }
+
+    button {
+        width: 100%;
+    }
+}
